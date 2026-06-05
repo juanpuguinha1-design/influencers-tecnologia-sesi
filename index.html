@@ -1095,7 +1095,7 @@ const DATA_LABS = [
     // ---- Conteúdo do lab ----
     fullDesc: 'O FabLab é um espaço de fabricação digital equipado com máquinas de última geração para criação de protótipos e produtos. Aqui você aprende desde o design digital até a fabricação física.',
     machines_list: [
-      { name: 'Cortadora a Laser', icon: '🔧', desc: 'em desenvolvimento...', status: 'warn' },
+      { name: 'Cortadora a Laser', icon: '🔧', desc: 'em desenvolvimento...', status: 'warn', link: 'https://canva.link/oqydq3sr3unfbrg' },
       { name: 'xxx', icon: '🔧', desc: 'em desenvolvimento...', status: 'warn'},
       { name: 'xxx', icon: '🔧', desc: 'em desenvolvimento...', status: 'warn' },
       { name: 'xxx', icon: '🔧', desc: 'em desenvolvimento...', status: 'warn' },
@@ -1531,6 +1531,7 @@ function renderLabDetail(lab) {
               <i class="ti ti-circle-filled" style="font-size:8px"></i>
               ${m.status === 'ok' ? 'Disponível' : 'Em manutenção'}
             </div>
+          ${m.link ? `<a href="${m.link}" target="_blank" style="display:inline-block;margin-top:8px;padding:6px 12px;background:#3B82F6;color:white;border-radius:6px;text-decoration:none;font-size:13px">Ver Tutorial</a>` : ''}
           </div>
         `).join('')}
       </div>
