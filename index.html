@@ -1165,15 +1165,15 @@ const DATA_LABS = [
     ],
   },
   {
-    id: 'impressao3d',
-    name: 'Impressão 3D',
-    desc: 'Modelagem e impressão de objetos em polímero FDM e resina.',
+    id: 'Química',
+    name: 'Química',
+    desc: 'xxx',
     icon: '📦',
     color: '#10B981',
     bgColor: 'rgba(16,185,129,.12)',
     tutorials: 5,
     machines: 3,
-    fullDesc: 'Nosso laboratório de Impressão 3D conta com impressoras FDM e de resina para prototipagem. Aprenda desde o design no Tinkercad até a impressão e pós-processamento.',
+    fullDesc: 'xxx',
     machines_list: [
       { name: 'Creality Ender 3 Pro', icon: '🖨️', desc: 'Impressora FDM com área de impressão 220x220x250mm.', status: 'ok' },
       { name: 'Bambu Lab A1', icon: '🎯', desc: 'Impressora FDM de alta velocidade com sistema multifilamento.', status: 'ok' },
@@ -1428,7 +1428,7 @@ function navigate(page) {
 }
 
 function openLab(id) {
-  const lab = DATA_LABS.find(l => l.id === id);
+  const lab = DATA_LABS.find(l => l.id.toLowerCase() === id.toLowerCase());
   if (!lab) return;
   currentLab = lab;
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
